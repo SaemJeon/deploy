@@ -13,6 +13,13 @@ module.exports = (app) => {
     return context.octokit.issues.createComment(issueComment);
   });
 
+  app.on("pull_request.edited", async (context) => {
+    const issueComment = context.issue({
+      body: "Pull reuqest has been edited!",
+    });
+    return context.octokit.issues.createComment(issueComment);
+  });
+
   // For more information on building apps:
   // https://probot.github.io/docs/
 
