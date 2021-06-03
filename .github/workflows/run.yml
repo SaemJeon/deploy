@@ -3,12 +3,11 @@ on:
   issues:
     types:
       - opened
-  pull_request:
 
 jobs:
   sayHelloWorld:
     runs-on: ubuntu-latest
     steps:
-      - uses: SaemJeon/deploy@v1
+      - uses: probot/example-github-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
