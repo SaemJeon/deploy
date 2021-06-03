@@ -20,6 +20,13 @@ module.exports = (app) => {
     return context.octokit.issues.createComment(issueComment);
   });
 
+  app.on("push", async (context) => {
+    const issueComment = context.issue({
+      body: "Something is pushed",
+    });
+    return context.octokit.issues.createComment(issueComment);
+  });
+
   // For more information on building apps:
   // https://probot.github.io/docs/
 
