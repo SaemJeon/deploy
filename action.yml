@@ -2,4 +2,4 @@ name: "Probot app name"
 description: "Probot app description."
 runs:
   using: "node12"
-  main: "main.js"
+  main: "dist/index.js"
