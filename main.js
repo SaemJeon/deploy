@@ -1,4 +1,4 @@
-const { run } = require("@probot/adapter-github-actions");
+const { run } = require("probot");
 const app = require("./index.js");
 
 run(app);
